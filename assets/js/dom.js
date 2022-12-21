@@ -30,7 +30,7 @@ const DOM = () => {
     _canvas.addEventListener('mousedown', _startDrawing);
   };
 
-  const setEventListeners = () => {
+  const _setEventListeners = () => {
     _canvas.addEventListener('mousedown', _startDrawing);
     _canvas.addEventListener('mouseup', _stopDrawing);
     _canvas.addEventListener('mousemove', _draw);
@@ -55,7 +55,7 @@ const DOM = () => {
     });
   };
 
-  const init = () => {
+  const _setColorButtons = () => {
     const colorsContainer = document.getElementById("colors");
 
     _COLORS.forEach((color) => {
@@ -70,8 +70,11 @@ const DOM = () => {
 
       colorsContainer.appendChild(colorDiv);
     });
+  };
 
-    setEventListeners(_canvasManager);
+  const init = () => {
+    _setColorButtons();
+    _setEventListeners(_canvasManager);
   };
 
   return { init };
