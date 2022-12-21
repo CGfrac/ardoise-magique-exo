@@ -1,2 +1,2 @@
-const drawingManager = DrawingManager();
-init(drawingManager);
+const dom = DOM();
+dom.init();
