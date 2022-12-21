@@ -1,4 +1,4 @@
-const DrawingManager = (canvas) => {
+const CanvasManager = (canvas) => {
     const _canvas = canvas;
     const _ctx = _canvas.getContext('2d');
 

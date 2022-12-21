@@ -1,6 +1,6 @@
 const DOM = () => {
   const _canvas = document.getElementById('canvas');
-  const _canvasManager = DrawingManager(_canvas);
+  const _canvasManager = CanvasManager(_canvas);
 
   const _COLORS = [
       "#000000",
