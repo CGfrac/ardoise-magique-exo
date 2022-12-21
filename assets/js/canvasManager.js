@@ -9,10 +9,8 @@ const CanvasManager = (canvas) => {
   const _pos = { x: 0, y: 0 };
 
   const _updatePos = () => {
-    const rect = _canvas.getBoundingClientRect();
-
-    _pos.x = event.clientX - rect.left;
-    _pos.y = event.clientY - rect.top;
+    _pos.x = event.clientX - _canvas.offsetLeft;
+    _pos.y = event.clientY - _canvas.offsetTop;
   };
 
   const start = () => {
