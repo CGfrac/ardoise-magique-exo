@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css
     ">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/dom.js"></script>
+    <script src="./assets/js/drawingManager.js"></script>
     <script src="./assets/js/index.js" defer></script>
 </head>
 <body>
@@ -21,8 +24,8 @@
         <div class="options-container">
             <span>Outils</span>
             <div>
-                <button><i class="fa-sharp fa-solid fa-eraser"></i></button>
-                <button><i class="fa-sharp fa-solid fa-eye-dropper"></i></button>
+                <button id="eraser"><i class="fa-sharp fa-solid fa-eraser"></i></button>
+                <button id="color-picker"><i class="fa-sharp fa-solid fa-eye-dropper"></i></button>
             </div>
 
             <span>Couleur</span>
@@ -32,9 +35,9 @@
 
             <span>Epaisseur</span>
             <div>
-                <button>Fin</button>
-                <button>Normal</button>
-                <button>Epais</button>
+                <button class="epaisseur">Fin</button>
+                <button class="epaisseur">Normal</button>
+                <button class="epaisseur">Epais</button>
             </div>
         </div>
     </main>
