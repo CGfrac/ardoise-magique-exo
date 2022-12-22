@@ -9,6 +9,30 @@ const DOM = () => {
       "#0378a6",
     ];
 
+  let _currentActiveColor = '#000000';
+
+  const setActiveButtonClass = id => {
+    const button = document.getElementById(id);
+    button.classList.add('active-button');
+  };
+
+  const deleteActiveButtonClass = id => {
+    const button = document.getElementById(id);
+    button.classList.remove('active-button');
+  };
+
+  const removeCurrentActiveColorClass = () => {
+    const colorDiv = document.querySelector(`[data-color="${_currentActiveColor}"]`);
+    colorDiv.classList.remove('active-color');
+  };
+
+  const updateActiveColor = color => {
+    const colorDiv = document.querySelector(`[data-color="${color}"]`);
+    colorDiv.classList.add('active-color');
+
+    _currentActiveColor = color;
+  }
+
   const _setColorButtons = () => {
     const colorsContainer = document.getElementById("colors");
 
@@ -21,11 +45,19 @@ const DOM = () => {
 
       colorsContainer.appendChild(colorDiv);
     });
+
+    updateActiveColor('#000000');
   };
 
   const init = () => {
     _setColorButtons();
   };
 
-  return { init };
+  return {
+    setActiveButtonClass,
+    deleteActiveButtonClass,
+    removeCurrentActiveColorClass,
+    updateActiveColor,
+    init
+  };
 };

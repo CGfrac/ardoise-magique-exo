@@ -50,3 +50,11 @@ button {
     height: 40px;
     border-radius: 50%;
 }
+
+.active-button {
+    background-color: #ffffff;
+}
+
+.active-color {
+    scale: 1.4;
+}

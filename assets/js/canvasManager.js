@@ -42,9 +42,13 @@ const CanvasManager = (canvas) => {
     _updatePos();
 
     const imgData = _ctx.getImageData(_pos.x, _pos.y, 1, 1);
-    const color = `rgb(${imgData.data[0]}, ${imgData.data[1]}, ${imgData.data[2]})`;
+
+    // ImageData is rgb. Converting to hex using bit manipulation for convenience
+    const color = '#' + ((1 << 24) + (imgData.data[0] << 16) + (imgData.data[1] << 8) + imgData.data[2]).toString(16).slice(1);
 
     setColor(color);
+
+    return color;
   };
 
   const setColor = (color) => _currentColor = color;
