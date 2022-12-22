@@ -74,7 +74,7 @@ const DOM = () => {
 
   const init = () => {
     _setColorButtons();
-    _setEventListeners(_canvasManager);
+    _setEventListeners();
   };
 
   return { init };
