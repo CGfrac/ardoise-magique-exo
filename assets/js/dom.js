@@ -27,10 +27,14 @@ const DOM = () => {
   };
 
   const updateActiveColor = color => {
-    const colorDiv = document.querySelector(`[data-color="${color}"]`);
-    colorDiv.classList.add('active-color');
-
-    _currentActiveColor = color;
+    // Change behavior if color is that of the eraser
+    if (color == '#ffffff') {
+      setActiveButtonClass('eraser');
+    } else {
+      const colorDiv = document.querySelector(`[data-color="${color}"]`);
+      colorDiv.classList.add('active-color');
+      _currentActiveColor = color;
+    }
   }
 
   const _setColorButtons = () => {
