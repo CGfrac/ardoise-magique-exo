@@ -19,7 +19,7 @@ const CanvasManager = (canvas) => {
     _drawing = true;
   };
 
-  const stop = () => (_drawing = false);
+  const stop = () => _drawing = false;
 
   const draw = () => {
     if (_drawing) {
@@ -47,7 +47,7 @@ const CanvasManager = (canvas) => {
     setColor(color);
   };
 
-  const setColor = (color) => (_currentColor = color);
+  const setColor = (color) => _currentColor = color;
   const setSize = (size) => {
     switch (size) {
       case "fin":
