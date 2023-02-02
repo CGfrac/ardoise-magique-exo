@@ -8,6 +8,7 @@ main {
     margin: 0 auto;
     font-size: 1.2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 16px;
 }
 
 h1 {
